@@ -1,0 +1,46 @@
+// Read in any properties that are securely sent from the command-line.
+if (project.hasProperty('maf_secure_props')) {
+    def secureProps = maf_secure_props.split(',')
+
+    def lines = System.in.readLines()
+
+    if (secureProps.size() != lines.size()) {
+        throw new GradleException("Input defined ${secureProps.size()} properties, but received ${lines.size()}.")
+    }
+    def index = 0
+    for (prop in secureProps) {
+        project.ext[prop] = lines[index++]
+    }
+}
+
+if (!project.hasProperty('maf_asset_packaging')) {
+    project.ext['maf_asset_packaging'] = 'rt'
+} else {
+    def packaging = project.ext.maf_asset_packaging
+
+    if (packaging != 'rt' && packaging != 'none') {
+        throw new GradleException("Invalid packaging type defined: $packaging.")
+    }
+}
+
+if (!project.hasProperty('maf_cpu_list')) {
+    project.ext['maf_cpu_list'] = 'all'
+}
+
+project.ext.maf_cpu_list = project.ext.maf_cpu_list.split(',').collect { it }
+project.ext['maf_cpu_arm_enabled'] = project.ext.maf_cpu_list.contains('all') || project.ext.maf_cpu_list.contains('arm')
+project.ext['maf_cpu_x86_enabled'] = project.ext.maf_cpu_list.contains('all') || project.ext.maf_cpu_list.contains('x86')
+
+if (!project.hasProperty('maf_native_included_language_list')) {
+    throw new GradleException("No supported native languages defined")
+}
+project.ext.maf_native_included_language_list = project.ext.maf_native_included_language_list.split(',').collect { it }
+
+if (!project.hasProperty('maf_java_included_language_list')) {
+    throw new GradleException("No supported Java languages defined")
+}
+project.ext.maf_java_included_language_list = project.ext.maf_java_included_language_list.split(',').collect { it }
+
+if (project.ext.maf_native_included_language_list.size() != project.ext.maf_java_included_language_list.size()){
+    throw new GradleException("Supported Java and native languages differ in size: native=${project.ext.maf_native_included_language_list.size()} and Java=${project.ext.maf_java_included_language_list.size()}.")
+}

@@ -1,0 +1,29 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="RESTSaaSConn" className="oracle.adf.model.connection.rest.RestConnection"
+             credentialStoreKey="RESTSaaSConn" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="RESTSaaSConn">
+        <Contents>
+          <restconnection name="RESTSaaSConn" url="https://ekkq-test.fa.em2.oraclecloud.com">
+            <authentication style="challenge">
+              <type>basic</type>
+            </authentication>
+          </restconnection>
+        </Contents>
+      </XmlRefAddr>
+      <SecureRefAddr addrType="password"/>
+      <SecureRefAddr addrType="username"/>
+    </RefAddresses>
+  </Reference>
+  <Reference name="RESTConn" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="RESTConn">
+        <Contents>
+          <restconnection name="RESTConn" url="http://cloud.appsakademi.com:20101/ItemRequestRestServices/rest/1"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

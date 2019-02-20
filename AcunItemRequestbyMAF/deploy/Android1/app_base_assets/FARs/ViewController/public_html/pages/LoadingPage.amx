@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="Header" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+      <amx:commandButton action="__back" id="cb1"/>
+    </amx:facet>
+    <amx:panelStretchLayout id="psl1">
+      <amx:facet name="top"/>
+      <amx:facet name="center">
+        <amx:panelStretchLayout id="Tab1" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx">
+          <amx:facet name="center">
+            <amx:flexLayout itemFlexibility="inflexible" itemAlignment="center" itemJustification="center"
+                            inlineStyle="background-color:#DAE9F5" id="fl1">
+              <amx:panelGroupLayout layout="vertical" halign="center" inlineStyle="width: 100%" id="pgl1">
+                <amx:outputText value="Content Loading, please wait..."
+                                inlineStyle="color:#999; white-space:normal; font-weight:bold; font-size:20px"
+                                id="ot2"/>
+              </amx:panelGroupLayout>
+            </amx:flexLayout>
+          </amx:facet>
+        </amx:panelStretchLayout>
+      </amx:facet>
+    </amx:panelStretchLayout>
+  </amx:panelPage>
+</amx:view>

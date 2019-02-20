@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+    <amx:panelPage id="pp1">
+        <amx:facet name="header">
+            <amx:outputText value="Distribution's Edit" id="ot1"/>
+        </amx:facet>
+        <amx:facet name="primary">
+            <amx:commandButton id="cb1" action="backToDistribution" text="Back"/>
+        </amx:facet>
+        <amx:facet name="secondary">
+            <amx:commandButton id="cb2" text="Check-in"/>
+            <amx:commandButton id="cb3" text="Check-out"/>
+            <amx:commandButton actionListener="#{bindings.SaveDistribution.execute}" text="Save"
+                               action="backToDistribution" id="cb4"/>
+        </amx:facet>
+        <amx:panelStretchLayout id="psl1">
+            <amx:facet name="top"/>
+            <amx:facet name="center">
+                <amx:panelFormLayout id="pfl1">
+                    <amx:inputText value="#{bindings.itemRequestId.inputValue}"
+                                   label="Item Request ID" id="it7" readOnly="true">
+                        <amx:convertNumber groupingUsed="false" id="cn5"/>
+                    </amx:inputText>
+                    <amx:inputText value="#{bindings.itemRequestLine.inputValue}"
+                                   label="Item Request Line" id="it3" readOnly="true">
+                        <amx:convertNumber groupingUsed="false" id="cn2"/>
+                    </amx:inputText>
+                    <amx:inputText value="#{bindings.itemDistributionLine.inputValue}"
+                                   label="Distribution Line" id="it2" readOnly="true">
+                        <amx:convertNumber groupingUsed="false" id="cn1"/>
+                    </amx:inputText>
+                    <amx:inputText value="#{bindings.requestLineStatus.inputValue}"
+                                   label="Line Status" id="it1" readOnly="true"/>
+                    <amx:inputText value="#{bindings.requestSubinventory.inputValue}"
+                                   label="Request Subinventory" id="it8" readOnly="true"/>
+                    <amx:inputText value="#{bindings.requestLocator.inputValue}"
+                                   label="Request Locator" id="it13" readOnly="true"/>
+                    <amx:selectOneChoice value="#{bindings.sourceSubinventory.inputValue}"
+                                         valueChangeListener="#{bindings.SubinventoryVCE.execute}"
+                                         label="Source Subinventory" id="soc1">
+                        <amx:selectItems value="#{bindings.sourceSubinventory.items}" id="si1"/>
+                    </amx:selectOneChoice>
+                    <amx:selectOneChoice value="#{bindings.sourceLocator.inputValue}"
+                                         label="Source Locator" id="soc2">
+                        <amx:selectItems value="#{bindings.sourceLocator.items}" id="si2"/>
+                    </amx:selectOneChoice>
+                    <amx:inputText value="#{bindings.approvedQuantity.inputValue}"
+                                   label="Approved Quantity" id="it5">
+                        <amx:convertNumber groupingUsed="false" id="cn3"/>
+                    </amx:inputText>
+                    <amx:inputText value="#{bindings.requestUom.inputValue}"
+                                   label="Request Uom" id="it12" readOnly="true"/>
+                </amx:panelFormLayout>
+            </amx:facet>
+        </amx:panelStretchLayout>
+    </amx:panelPage>
+</amx:view>

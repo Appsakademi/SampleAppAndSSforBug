@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="DistributionDetailPagePageDef"
+                Package="mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="DataControlDC" id="DataControlDCIterator"/>
+    <accessorIterator MasterBinding="DataControlDCIterator" Binds="itemRequestDistributions" RangeSize="25"
+                      DataControl="DataControlDC" BeanClass="application.entities.ItemRequestDistributionEntity"
+                      id="itemRequestDistributionsIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="itemRequestId">
+      <AttrNames>
+        <Item Value="itemRequestId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="itemRequestLine">
+      <AttrNames>
+        <Item Value="itemRequestLine"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="itemDistributionLine">
+      <AttrNames>
+        <Item Value="itemDistributionLine"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="approvedQuantity">
+      <AttrNames>
+        <Item Value="approvedQuantity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="organizationId">
+      <AttrNames>
+        <Item Value="organizationId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="requestLineStatus">
+      <AttrNames>
+        <Item Value="requestLineStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="requestUom">
+      <AttrNames>
+        <Item Value="requestUom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="requestSubinventory">
+      <AttrNames>
+        <Item Value="requestSubinventory"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="requestLocator">
+      <AttrNames>
+        <Item Value="requestLocator"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="subinventoriesLink">
+      <AttrNames>
+        <Item Value="subinventoriesLink"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="locatorsLink">
+      <AttrNames>
+        <Item Value="locatorsLink"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="itemRequestDistributionsIterator" StaticList="false" Uses="LOV_sourceLocator"
+          id="sourceLocator" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="sourceLocatorId">
+      <AttrNames>
+        <Item Value="sourceLocatorId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemRequestDistributionsIterator" id="sourceSubinventoryId">
+      <AttrNames>
+        <Item Value="sourceSubinventoryId"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="itemRequestDistributionsIterator" StaticList="false" Uses="LOV_sourceSubinventory"
+          id="sourceSubinventory" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <methodAction id="SubinventoryVCE" RequiresUpdateModel="true" Action="invokeMethod" MethodName="SubinventoryVCE"
+                  IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.SubinventoryVCE.dataControl.dataProvider"/>
+    <methodAction id="SaveDistribution" RequiresUpdateModel="true" Action="invokeMethod" MethodName="SaveDistribution"
+                  IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.SaveDistribution.dataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

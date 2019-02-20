@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.11.3" id="DataBindings"
+             SeparateXMLFiles="false" Package="mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/pages/HeaderListPage.amx" usageId="mobile_HeaderListPagePageDef"/>
+    <page path="/pages/DetailPage.amx" usageId="mobile_TempPagePageDef"/>
+    <page path="/pages/DistributionPage.amx" usageId="mobile_DistributionPagePageDef"/>
+    <page path="/pages/DistributionEditPage.amx" usageId="mobile_DistributionDetailPagePageDef"/>
+    <page path="/pages/SaerchPage.amx" usageId="mobile_SaerchPagePageDef"/>
+    <page path="/pages/DetailSearchPage.amx" usageId="mobile_DetailSearchPagePageDef"/>
+    <page path="/pages/DistributionSearchPage.amx" usageId="mobile_DistributionSearchPagePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="mobile_HeaderListPagePageDef" path="pages.HeaderListPagePageDef"/>
+    <page id="mobile_TempPagePageDef" path="pages.TempPagePageDef"/>
+    <page id="mobile_DistributionPagePageDef" path="pages.DistributionPagePageDef"/>
+    <page id="mobile_DistributionDetailPagePageDef" path="mobile.pageDefs.DistributionDetailPagePageDef"/>
+    <page id="mobile_SaerchPagePageDef" path="mobile.pageDefs.SaerchPagePageDef"/>
+    <page id="mobile_DetailSearchPagePageDef" path="mobile.pageDefs.DetailSearchPagePageDef"/>
+    <page id="mobile_DistributionSearchPagePageDef" path="pages.DistributionSearchPagePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="DataControlDC" path="application.DataControlDC"/>
+  </dataControlUsages>
+</Application>

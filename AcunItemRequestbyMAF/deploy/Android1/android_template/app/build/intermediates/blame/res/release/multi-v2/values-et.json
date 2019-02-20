@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yunus\\Desktop\\Desktop\\JDeveloper Projects\\mywork\\AcunItemRequestbyMAF\\deploy\\Android1\\android_template\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-et\\values-et.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yunus\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\7c941d25fdc93f132837761bd698a8f1\\res\\values-et\\values-et.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

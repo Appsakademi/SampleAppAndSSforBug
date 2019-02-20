@@ -1,0 +1,200 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:1-31:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\b8a3f4eb3fe85a8ce08c576b74518f1b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\6ee6a8363edfedbc131be4a1cc6b1550\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\b2f4c880675770dc9f4a9df1c0945f4b\AndroidManifest.xml:17:1-22:12
+MERGED from [:Container] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\Container.aar\491295f0cdc227a175e43c72b0fe9ea1\AndroidManifest.xml:3:1-12:12
+MERGED from [:CordovaLib] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\CordovaLib.aar\b0e42a8e2c55731571af44a8e694dc44\AndroidManifest.xml:20:1-27:12
+MERGED from [:IDMMobileSDK] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\IDMMobileSDK.aar\101405d756f34fd84941bc4a4e0fe8a9\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\703bccfea0e7497cac9d490345c1d9b7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bf5c84b9e338cdbbe7e9e3240475b9f0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\acd7e3fd58fa5b01eca734ba116df473\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\7c941d25fdc93f132837761bd698a8f1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\a5ebe5e9310789182176e8bf19172d47\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\c519e82653766d311c75af714f7b3b6d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\124ad900bb1880d3a566c4302364f98d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9e373ebd608c4626aad56ed7fb7cc130\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:1-31:12
+	package
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:11-53
+		INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml
+		INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:113-159
+	android:versionCode
+		INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:1-31:12
+		INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:2:54-112
+uses-sdk
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:3:5-74
+INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:3:5-74
+INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:3:5-74
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\b8a3f4eb3fe85a8ce08c576b74518f1b\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\b8a3f4eb3fe85a8ce08c576b74518f1b\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\6ee6a8363edfedbc131be4a1cc6b1550\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\6ee6a8363edfedbc131be4a1cc6b1550\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\b2f4c880675770dc9f4a9df1c0945f4b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\b2f4c880675770dc9f4a9df1c0945f4b\AndroidManifest.xml:20:5-44
+MERGED from [:Container] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\Container.aar\491295f0cdc227a175e43c72b0fe9ea1\AndroidManifest.xml:8:5-10:41
+MERGED from [:Container] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\Container.aar\491295f0cdc227a175e43c72b0fe9ea1\AndroidManifest.xml:8:5-10:41
+MERGED from [:CordovaLib] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\CordovaLib.aar\b0e42a8e2c55731571af44a8e694dc44\AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\CordovaLib.aar\b0e42a8e2c55731571af44a8e694dc44\AndroidManifest.xml:25:5-44
+MERGED from [:IDMMobileSDK] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\IDMMobileSDK.aar\101405d756f34fd84941bc4a4e0fe8a9\AndroidManifest.xml:7:5-43
+MERGED from [:IDMMobileSDK] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\IDMMobileSDK.aar\101405d756f34fd84941bc4a4e0fe8a9\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\703bccfea0e7497cac9d490345c1d9b7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\703bccfea0e7497cac9d490345c1d9b7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bf5c84b9e338cdbbe7e9e3240475b9f0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bf5c84b9e338cdbbe7e9e3240475b9f0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\acd7e3fd58fa5b01eca734ba116df473\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\acd7e3fd58fa5b01eca734ba116df473\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\7c941d25fdc93f132837761bd698a8f1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\7c941d25fdc93f132837761bd698a8f1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\a5ebe5e9310789182176e8bf19172d47\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\a5ebe5e9310789182176e8bf19172d47\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\c519e82653766d311c75af714f7b3b6d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\c519e82653766d311c75af714f7b3b6d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\124ad900bb1880d3a566c4302364f98d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\124ad900bb1880d3a566c4302364f98d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9e373ebd608c4626aad56ed7fb7cc130\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9e373ebd608c4626aad56ed7fb7cc130\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:3:5-74
+INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:3:5-74
+	android:targetSdkVersion
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:3:42-71
+		INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml
+		INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:3:15-41
+		INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml
+		INJECTED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml
+application
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:5-24:19
+MERGED from [:IDMMobileSDK] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\IDMMobileSDK.aar\101405d756f34fd84941bc4a4e0fe8a9\AndroidManifest.xml:9:5-10:19
+MERGED from [:IDMMobileSDK] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\IDMMobileSDK.aar\101405d756f34fd84941bc4a4e0fe8a9\AndroidManifest.xml:9:5-10:19
+	android:supportsRtl
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:234-260
+	android:label
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:138-170
+		REJECTED from [:IDMMobileSDK] C:\Users\yunus\.gradle\caches\transforms-1\files-1.1\IDMMobileSDK.aar\101405d756f34fd84941bc4a4e0fe8a9\AndroidManifest.xml:9:18-56
+	android:debuggable
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:45-70
+	android:installLocation
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:107-137
+	android:icon
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:71-106
+	android:allowBackup
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:18-44
+	tools:replace
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:261-379
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:4:171-233
+activity#oracle.adfmf.Container
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:5:9-10:20
+	android:label
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:5:193-225
+	android:launchMode
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:5:226-257
+	android:hardwareAccelerated
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:5:158-192
+	android:windowSoftInputMode
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:5:329-371
+	android:configChanges
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:5:19-157
+	android:theme
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:5:296-328
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:5:258-295
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:6:13-9:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:7:17-69
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:7:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:8:17-77
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:8:27-74
+service#oracle.adfmf.service.ForegroundService
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:11:9-74
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:11:18-71
+activity#oracle.adfmf.SettingsActivity
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:12:9-157
+	android:windowSoftInputMode
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:12:112-154
+	android:theme
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:12:64-111
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:12:19-63
+activity#oracle.adfmf.framework.localnotification.MafNativeLocalNotificationActivity
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:13:9-112
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:13:19-109
+provider#android.support.v4.content.FileProvider
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:14:9-16:20
+	android:grantUriPermissions
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:14:112-146
+	android:authorities
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:14:19-86
+	android:exported
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:14:87-111
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:14:147-201
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:15:13-111
+	android:resource
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:15:75-108
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:15:24-74
+receiver#oracle.adfmf.framework.localnotification.NativeLocalNotificationBroadcastReceiver
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:17:9-118
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:17:19-115
+receiver#oracle.adfmf.framework.localnotification.NativeLocalNotificationRestoreReceiver
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:18:9-22:20
+	android:exported
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:18:19-43
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:18:44-138
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:19:13-21:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:20:17-79
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:20:25-76
+meta-data#secureWindowContents
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:23:9-80
+	android:value
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:23:56-77
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:23:20-55
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:25:5-81
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:25:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:26:5-66
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:26:22-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:27:5-79
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:27:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:28:5-67
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:28:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:29:5-80
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:29:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:30:5-81
+	android:name
+		ADDED from C:\Users\yunus\Desktop\Desktop\JDeveloper Projects\mywork\AcunItemRequestbyMAF\deploy\Android1\android_template\app\AndroidManifest.xml:30:22-78

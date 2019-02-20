@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+    <amx:panelPage id="pp1">
+        <amx:facet name="header">
+            <amx:outputText value="Item Requests" id="ot1"/>
+        </amx:facet>
+        <amx:facet name="primary">
+            <amx:commandButton text="Filter" id="cb3" action="goSearch">
+                <amx:setPropertyListener id="spl2" from="#{true}" to="#{bindings.headerFilterVisible.inputValue}"
+                                         type="action"/>
+            </amx:commandButton>
+        </amx:facet>
+        <amx:facet name="secondary">
+            <amx:commandButton text="Check-in" id="cb1"/>
+            <amx:commandButton text="Check-out" id="cb2"/>
+        </amx:facet>
+        <amx:panelStretchLayout id="psl1">
+            <amx:facet name="top">
+                <amx:panelGroupLayout id="pgl2" rendered="#{bindings.headerFilterVisible.inputValue}">
+                    <amx:panelFormLayout id="pfl1" rows="2" maxColumns="2">
+                        <amx:inputText value="#{bindings.filterHeaderRequestId.inputValue}" label="Request ID" id="it1">
+                            <amx:convertNumber groupingUsed="false" id="cn2"/>
+                        </amx:inputText>
+                        <amx:inputText value="#{bindings.filterHeaderParentProject.inputValue}" label="Parent Project"
+                                       id="it3"/>
+                        <amx:inputText value="#{bindings.filterHeaderRequestDesc.inputValue}" label="Request Desc."
+                                       id="it2"/>
+                        <amx:inputText value="#{bindings.filterHeaderRequestStatus.inputValue}" label="Request Status"
+                                       id="it4"/>
+                    </amx:panelFormLayout>
+                    <amx:panelGroupLayout id="pgl1" layout="horizontal" halign="end">
+                        <amx:commandButton text="Search" id="cb6" action="goSearch"/>
+                        <amx:commandButton text="Hide" id="cb5">
+                            <amx:setPropertyListener id="spl3" from="#{false}"
+                                                     to="#{bindings.headerFilterVisible.inputValue}" type="action"/>
+                        </amx:commandButton>
+                    </amx:panelGroupLayout>
+                </amx:panelGroupLayout>
+            </amx:facet>
+            <amx:facet name="center">
+                <amx:refreshContainer id="rc1" action="#{bindings.RefreshHeaders.execute}"
+                                      pullText="Swipe down for refresh" busyText="Refreshing...">
+                    <amx:listView var="row" value="#{bindings.itemRequestHeaders.collectionModel}"
+                                  fetchSize="#{bindings.itemRequestHeaders.rangeSize}"
+                                  selectedRowKeys="#{bindings.itemRequestHeaders.collectionModel.selectedRow}"
+                                  initialScrollRowKeys="#{bindings.itemRequestHeaders.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.itemRequestHeaders.collectionModel.makeCurrent}"
+                                  showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1">
+                        <amx:listItem id="li1" action="goDetail">
+                            <amx:setPropertyListener id="spl1" from="#{row.itemRequestId}"
+                                                     to="#{pageFlowScope.itemRequestId}" type="action"/>
+                            <amx:setPropertyListener id="spl4" from="#{false}"
+                                                     to="#{bindings.headerFilterVisible.inputValue}" type="action"/>
+                            <amx:actionListener id="al1" binding="#{bindings.ShowDetailPage.execute}" type="action"/>
+                            <amx:tableLayout width="100%" id="tl1">
+                                <amx:rowLayout id="rl1">
+                                    <amx:cellFormat width="10px" rowSpan="5" id="cf3"/>
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'36':'32'}px"
+                                                    id="cf2">
+                                        <amx:outputText value="#{row.itemRequestId}" id="ot2">
+                                            <amx:convertNumber groupingUsed="false" id="cn1"/>
+                                        </amx:outputText>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="10px" rowSpan="5" id="cf4"/>
+                                    <amx:cellFormat width="40%" halign="end" id="cf1">
+                                        <amx:outputText value="#{row.itemRequestDesc}"
+                                                        styleClass="adfmf-listItem-highlightText" id="ot11"/>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                                <amx:rowLayout id="rl2">
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px"
+                                                    id="cf5">
+                                        <amx:outputText value="#{row.itemRequiredDate}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot3"/>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="40%" halign="end" id="cf6">
+                                        <amx:outputText value="#{row.itemRequestStatus}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot4"/>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                                <amx:rowLayout id="rl3">
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px"
+                                                    id="cf7">
+                                        <amx:outputText value="#{row.parentProject}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot5"/>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="40%" halign="end" id="cf8">
+                                        <amx:outputText value="#{row.personId}" styleClass="adfmf-listItem-captionText"
+                                                        id="ot6"/>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                                <amx:rowLayout id="rl4">
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px"
+                                                    id="cf9">
+                                        <amx:outputText value="#{row.requestedInvOrg}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot7"/>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="40%" halign="end" id="cf10">
+                                        <amx:outputText value="" styleClass="adfmf-listItem-captionText" id="ot8"/>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                                <amx:rowLayout id="rl5">
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px"
+                                                    id="cf11">
+                                        <amx:outputText value="#{row.requestedSubinventory}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot9"/>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="40%" halign="end" id="cf12">
+                                        <amx:outputText value="#{row.requestedLocator}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot10"/>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                            </amx:tableLayout>
+                        </amx:listItem>
+                    </amx:listView>
+                </amx:refreshContainer>
+            </amx:facet>
+        </amx:panelStretchLayout>
+    </amx:panelPage>
+</amx:view>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+    <amx:panelPage id="pp1">
+        <amx:facet name="header">
+            <amx:outputText value="Distributions" id="ot1"/>
+        </amx:facet>
+        <amx:facet name="primary">
+            <amx:commandButton id="cb1" action="backToDetail" text="Back"/>
+            <amx:commandButton text="Filter" id="cb4" action="DistributionSearch">
+                <amx:setPropertyListener id="spl2" from="#{true}" to="#{bindings.distributionFilterVisible.inputValue}"
+                                         type="action"/>
+            </amx:commandButton>
+        </amx:facet>
+        <amx:facet name="secondary">
+            <amx:commandButton text="Check-in" id="cb2"/>
+            <amx:commandButton text="Check-out" id="cb3"/>
+        </amx:facet>
+        <amx:panelStretchLayout id="psl1">
+            <amx:facet name="top">
+                <amx:panelGroupLayout id="pgl1" rendered="#{bindings.distributionFilterVisible.inputValue}">
+                    <amx:panelFormLayout id="pfl1">
+                        <amx:inputText value="#{bindings.filterDistributionLine.inputValue}" label="Distribution Line"
+                                       id="it1">
+                            <amx:convertNumber groupingUsed="false" id="cn7"/>
+                        </amx:inputText>
+                        <amx:selectOneChoice value="#{bindings.filterDistributionReqSubinv.inputValue}"
+                                             label="Req. Subinventory" id="soc1">
+                            <amx:selectItems value="#{bindings.filterDistributionReqSubinv.items}" id="si1"/>
+                        </amx:selectOneChoice>
+                        <amx:inputText value="#{bindings.filterDistributionLineStatus.inputValue}" label="Line Status"
+                                       id="it2"/>
+                        <amx:selectOneChoice value="#{bindings.filterDistributionLocator.inputValue}"
+                                             label="Req. Locator" id="soc2">
+                            <amx:selectItems value="#{bindings.filterDistributionLocator.items}" id="si2"/>
+                        </amx:selectOneChoice>
+                    </amx:panelFormLayout>
+                    <amx:panelGroupLayout id="pgl2" layout="horizontal" halign="end">
+                        <amx:commandButton text="Search" id="cb6" action="DistributionSearch"/>
+                        <amx:commandButton text="Hide" id="cb5">
+                            <amx:setPropertyListener id="spl3" from="#{false}"
+                                                     to="#{bindings.distributionFilterVisible.inputValue}"
+                                                     type="action"/>
+                        </amx:commandButton>
+                    </amx:panelGroupLayout>
+                </amx:panelGroupLayout>
+            </amx:facet>
+            <amx:facet name="center">
+                <amx:refreshContainer id="rc1" action="#{bindings.RefreshDistributions.execute}"
+                                      pullText="Swipe down for refresh" busyText="Refreshing...">
+                    <amx:listView var="row" value="#{bindings.itemRequestDistributions.collectionModel}"
+                                  fetchSize="#{bindings.itemRequestDistributions.rangeSize}"
+                                  selectedRowKeys="#{bindings.itemRequestDistributions.collectionModel.selectedRow}"
+                                  initialScrollRowKeys="#{bindings.itemRequestDistributions.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.itemRequestDistributions.collectionModel.makeCurrent}"
+                                  showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1">
+                        <amx:listItem id="li1" action="goDistributionDetail">
+                            <amx:setPropertyListener id="spl1" from="#{row.itemDistributionLine}"
+                                                     to="#{pageFlowScope.itemDistributionLine}" type="action"/>
+                            <amx:actionListener id="al1" type="action"
+                                                binding="#{bindings.ShowDistributionEdit.execute}"/>
+                            <amx:tableLayout width="100%" id="tl1">
+                                <amx:rowLayout id="rl1">
+                                    <amx:cellFormat width="10px" rowSpan="5" id="cf4"/>
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'36':'32'}px"
+                                                    id="cf3">
+                                        <amx:outputText value="#{row.itemRequestId}" id="ot3">
+                                            <amx:convertNumber groupingUsed="false" id="cn2"/>
+                                        </amx:outputText>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="10px" rowSpan="5" id="cf2"/>
+                                    <amx:cellFormat width="40%" halign="end" id="cf1">
+                                        <amx:outputText value="#{row.itemRequestLine}"
+                                                        styleClass="adfmf-listItem-highlightText" id="ot2">
+                                            <amx:convertNumber groupingUsed="false" id="cn1"/>
+                                        </amx:outputText>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                                <amx:rowLayout id="rl2">
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px"
+                                                    id="cf5">
+                                        <amx:outputText value="#{row.requestLineStatus}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot4"/>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="40%" halign="end" id="cf6">
+                                        <amx:outputText value="#{row.itemDistributionLine}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot5">
+                                            <amx:convertNumber groupingUsed="false" id="cn3"/>
+                                        </amx:outputText>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                                <amx:rowLayout id="rl3">
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px"
+                                                    id="cf7">
+                                        <amx:outputText value="#{row.approvedQuantity}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot6"/>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="40%" halign="end" id="cf8">
+                                        <amx:outputText value="#{row.requestUom}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot7">
+                                            <amx:convertNumber groupingUsed="false" id="cn4"/>
+                                        </amx:outputText>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                                <amx:rowLayout id="rl4">
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px"
+                                                    id="cf9">
+                                        <amx:outputText value="#{row.sourceSubinventory}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot8"/>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="40%" halign="end" id="cf10">
+                                        <amx:outputText value="#{row.sourceLocator}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot9">
+                                            <amx:convertNumber groupingUsed="false" id="cn5"/>
+                                        </amx:outputText>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                                <amx:rowLayout id="rl5">
+                                    <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px"
+                                                    id="cf11">
+                                        <amx:outputText value="#{row.requestSubinventory}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot10"/>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat width="40%" halign="end" id="cf12">
+                                        <amx:outputText value="#{row.requestLocator}"
+                                                        styleClass="adfmf-listItem-captionText" id="ot11">
+                                            <amx:convertNumber groupingUsed="false" id="cn6"/>
+                                        </amx:outputText>
+                                    </amx:cellFormat>
+                                </amx:rowLayout>
+                            </amx:tableLayout>
+                        </amx:listItem>
+                    </amx:listView>
+                </amx:refreshContainer>
+            </amx:facet>
+        </amx:panelStretchLayout>
+    </amx:panelPage>
+</amx:view>

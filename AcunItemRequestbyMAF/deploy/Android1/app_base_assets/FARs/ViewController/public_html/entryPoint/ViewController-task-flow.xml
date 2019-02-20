@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="ViewController-task-flow">
+    <default-activity>HeaderListPage</default-activity>
+    <view id="HeaderListPage">
+      <page>/pages/HeaderListPage.amx</page>
+    </view>
+    <view id="DetailPage">
+      <page>/pages/DetailPage.amx</page>
+    </view>
+    <view id="LoadingPage">
+      <page>/pages/LoadingPage.amx</page>
+    </view>
+    <view id="DistributionPage">
+      <page>/pages/DistributionPage.amx</page>
+    </view>
+    <view id="DistributionDetailPage">
+      <page>/pages/DistributionEditPage.amx</page>
+    </view>
+    <view id="SaerchPage">
+      <page>/pages/SaerchPage.amx</page>
+    </view>
+    <view id="DetailSearchPage">
+      <page>/pages/DetailSearchPage.amx</page>
+    </view>
+    <view id="DistributionSearchPage">
+      <page>/pages/DistributionSearchPage.amx</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>HeaderListPage</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>goDetail</from-outcome>
+        <to-activity-id>DetailPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>goSearch</from-outcome>
+        <to-activity-id>SaerchPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>LoadingPage</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>goDetailPage</from-outcome>
+        <to-activity-id>DetailPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__16">
+        <from-outcome>dist</from-outcome>
+        <to-activity-id>DistributionDetailPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>DetailPage</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>backToHeader</from-outcome>
+        <to-activity-id>HeaderListPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>goLoadingPageFromDetail</from-outcome>
+        <to-activity-id>LoadingPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>goDistribution</from-outcome>
+        <to-activity-id>DistributionPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__17">
+        <from-outcome>DetailSearch</from-outcome>
+        <to-activity-id>DetailSearchPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__10">
+      <from-activity-id>DistributionPage</from-activity-id>
+      <control-flow-case id="__11">
+        <from-outcome>backToDetail</from-outcome>
+        <to-activity-id>DetailPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__12">
+        <from-outcome>goDistributionDetail</from-outcome>
+        <to-activity-id>DistributionDetailPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__24">
+        <from-outcome>DistributionSearch</from-outcome>
+        <to-activity-id>DistributionSearchPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__13">
+      <from-activity-id>DistributionDetailPage</from-activity-id>
+      <control-flow-case id="__14">
+        <from-outcome>backToDistribution</from-outcome>
+        <to-activity-id>DistributionPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__15">
+        <from-outcome>load</from-outcome>
+        <to-activity-id>LoadingPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__18">
+      <from-activity-id>SaerchPage</from-activity-id>
+      <control-flow-case id="__19">
+        <from-outcome>backHeader</from-outcome>
+        <to-activity-id>HeaderListPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__20">
+      <from-activity-id>DetailSearchPage</from-activity-id>
+      <control-flow-case id="__21">
+        <from-outcome>DetailBack</from-outcome>
+        <to-activity-id>DetailPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__22">
+        <from-outcome>backToHeader2</from-outcome>
+        <to-activity-id>HeaderListPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__23">
+        <from-outcome>goDistribution2</from-outcome>
+        <to-activity-id>DistributionPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__25">
+      <from-activity-id>DistributionSearchPage</from-activity-id>
+      <control-flow-case id="__26">
+        <from-outcome>DistributionBack</from-outcome>
+        <to-activity-id>DistributionPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__27">
+        <from-outcome>goDistributionDetail2</from-outcome>
+        <to-activity-id>DistributionDetailPage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>

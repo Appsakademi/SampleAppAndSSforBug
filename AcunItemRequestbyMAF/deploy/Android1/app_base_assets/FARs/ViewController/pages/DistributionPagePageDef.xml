@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="DistributionPagePageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="DataControlDC" id="DataControlDCIterator"/>
+    <accessorIterator MasterBinding="DataControlDCIterator" Binds="itemRequestDistributions" RangeSize="25"
+                      DataControl="DataControlDC" BeanClass="application.entities.ItemRequestDistributionEntity"
+                      id="itemRequestDistributionsIterator"/>
+    <accessorIterator MasterBinding="DataControlDCIterator" Binds="subinventories" RangeSize="-1"
+                      DataControl="DataControlDC" BeanClass="application.entities.SubinventoryEntity"
+                      id="subinventoriesIterator"/>
+    <accessorIterator MasterBinding="DataControlDCIterator" Binds="locators" RangeSize="-1" DataControl="DataControlDC"
+                      BeanClass="application.entities.LocatorEntity" id="locatorsIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="itemRequestDistributionsIterator" id="itemRequestDistributions">
+      <nodeDefinition DefName="application.entities.ItemRequestDistributionEntity" Name="itemRequestDistributions0">
+        <AttrNames>
+          <Item Value="itemRequestId"/>
+          <Item Value="itemRequestLine"/>
+          <Item Value="requestLineStatus"/>
+          <Item Value="itemDistributionLine"/>
+          <Item Value="approvedQuantity"/>
+          <Item Value="requestUom"/>
+          <Item Value="sourceSubinventory"/>
+          <Item Value="sourceLocator"/>
+          <Item Value="requestSubinventory"/>
+          <Item Value="requestLocator"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="RefreshDistributions" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="RefreshDistributions" IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.RefreshDistributions.dataControl.dataProvider"/>
+    <methodAction id="ShowDistributionEdit" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="ShowDistributionEdit" IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.ShowDistributionEdit.dataControl.dataProvider"/>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterDistributionLine">
+      <AttrNames>
+        <Item Value="filterDistributionLine"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterDistributionLineStatus">
+      <AttrNames>
+        <Item Value="filterDistributionLineStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="distributionFilterVisible">
+      <AttrNames>
+        <Item Value="distributionFilterVisible"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="FilterDistributions" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="FilterDistributions" IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.FilterDistributions.dataControl.dataProvider"/>
+    <tree IterBinding="subinventoriesIterator" id="subinventories">
+      <nodeDefinition DefName="application.entities.SubinventoryEntity" Name="subinventories0">
+        <AttrNames>
+          <Item Value="secondaryInventoryName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="locatorsIterator" id="locators">
+      <nodeDefinition DefName="application.entities.LocatorEntity" Name="locators0">
+        <AttrNames>
+          <Item Value="locator"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <list IterBinding="DataControlDCIterator" id="filterDistributionReqSubinv" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject" StaticList="false" ListIter="subinventoriesIterator"
+          NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+          NullValueFlag="start">
+      <AttrNames>
+        <Item Value="filterDistributionReqSubinv"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="secondaryInventoryName"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="secondaryInventoryName"/>
+      </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="DataControlDCIterator" id="filterDistributionLocator" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject" StaticList="false" ListIter="locatorsIterator"
+          NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+          NullValueFlag="start">
+      <AttrNames>
+        <Item Value="filterDistributionLocator"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="locator"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="locator"/>
+      </ListDisplayAttrNames>
+    </list>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,5 @@
+include ':app'
+include ':Container'
+include ':CordovaLib'
+include ':IDMMobileSDK'
+apply from: 'app/settings.gradle'

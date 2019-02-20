@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="DetailSearchPagePageDef"
+                Package="mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="DataControlDC" id="DataControlDCIterator"/>
+    <accessorIterator MasterBinding="DataControlDCIterator" Binds="itemRequestDetails" RangeSize="25"
+                      DataControl="DataControlDC" BeanClass="application.entities.ItemRequestDetailEntity"
+                      id="itemRequestDetailsIterator"/>
+    <accessorIterator MasterBinding="DataControlDCIterator" Binds="subinventories" RangeSize="-1"
+                      DataControl="DataControlDC" BeanClass="application.entities.SubinventoryEntity"
+                      id="subinventoriesIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="DataControlDCIterator" id="detailFilterVisible">
+      <AttrNames>
+        <Item Value="detailFilterVisible"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterDetailLineId">
+      <AttrNames>
+        <Item Value="filterDetailLineId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterDetailLineStatus">
+      <AttrNames>
+        <Item Value="filterDetailLineStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterDetailInvItemNumber">
+      <AttrNames>
+        <Item Value="filterDetailInvItemNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="itemRequestDetailsIterator" id="itemRequestDetails">
+      <nodeDefinition DefName="application.entities.ItemRequestDetailEntity" Name="itemRequestDetails0">
+        <AttrNames>
+          <Item Value="itemRequestLine"/>
+          <Item Value="requestSubinventory"/>
+          <Item Value="itemNumber"/>
+          <Item Value="parentProject"/>
+          <Item Value="requestDetailNote"/>
+          <Item Value="requestLineStatus"/>
+          <Item Value="requestLocator"/>
+          <Item Value="requestQuantity"/>
+          <Item Value="requestUom"/>
+          <Item Value="itemRequestId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="subinventoriesIterator" id="subinventories">
+      <nodeDefinition DefName="application.entities.SubinventoryEntity" Name="subinventories0">
+        <AttrNames>
+          <Item Value="organizationId"/>
+          <Item Value="subinventoryId"/>
+          <Item Value="secondaryInventoryName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <list IterBinding="DataControlDCIterator" id="filterDetailReqSubinv" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject" StaticList="false" ListIter="subinventoriesIterator"
+          NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+          NullValueFlag="start">
+      <AttrNames>
+        <Item Value="filterDetailReqSubinv"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="subinventoryId"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="secondaryInventoryName"/>
+      </ListDisplayAttrNames>
+    </list>
+    <methodAction id="FilterDetails" RequiresUpdateModel="true" Action="invokeMethod" MethodName="FilterDetails"
+                  IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.FilterDetails.dataControl.dataProvider"/>
+    <methodAction id="ShowDistributionPage" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="ShowDistributionPage" IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.ShowDistributionPage.dataControl.dataProvider"/>
+    <methodAction id="RefreshDetails" RequiresUpdateModel="true" Action="invokeMethod" MethodName="RefreshDetails"
+                  IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.RefreshDetails.dataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

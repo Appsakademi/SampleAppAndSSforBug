@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="SaerchPagePageDef"
+                Package="mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="DataControlDC" id="DataControlDCIterator"/>
+    <accessorIterator MasterBinding="DataControlDCIterator" Binds="itemRequestHeaders" RangeSize="25"
+                      DataControl="DataControlDC" BeanClass="application.entities.ItemRequestHeaderEntity"
+                      id="itemRequestHeadersIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="DataControlDCIterator" id="headerFilterVisible">
+      <AttrNames>
+        <Item Value="headerFilterVisible"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="itemRequestHeadersIterator" id="itemRequestHeaders">
+      <nodeDefinition DefName="application.entities.ItemRequestHeaderEntity" Name="itemRequestHeaders0">
+        <AttrNames>
+          <Item Value="itemRequestId"/>
+          <Item Value="itemRequestDesc"/>
+          <Item Value="parentProject"/>
+          <Item Value="itemRequestStatus"/>
+          <Item Value="requestedSubinventory"/>
+          <Item Value="requestedLocator"/>
+          <Item Value="requestedInvOrg"/>
+          <Item Value="personId"/>
+          <Item Value="itemRequiredDate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterHeaderRequestDesc">
+      <AttrNames>
+        <Item Value="filterHeaderRequestDesc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterHeaderParentProject">
+      <AttrNames>
+        <Item Value="filterHeaderParentProject"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterHeaderRequestStatus">
+      <AttrNames>
+        <Item Value="filterHeaderRequestStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="FilterHeaders" RequiresUpdateModel="true" Action="invokeMethod" MethodName="FilterHeaders"
+                  IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.FilterHeaders.dataControl.dataProvider"/>
+    <attributeValues IterBinding="DataControlDCIterator" id="filterHeaderRequestId">
+      <AttrNames>
+        <Item Value="filterHeaderRequestId"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="RefreshHeaders" RequiresUpdateModel="true" Action="invokeMethod" MethodName="RefreshHeaders"
+                  IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.RefreshHeaders.dataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

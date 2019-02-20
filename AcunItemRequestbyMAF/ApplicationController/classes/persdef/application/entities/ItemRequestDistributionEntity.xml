@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE PDefViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<PDefViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ItemRequestDistributionEntity"
+  Version="12.2.1.11.3">
+  <DesignTime>
+    <Attr Name="_DCName" Value="application.DataControls.DataControlDC"/>
+    <Attr Name="_SDName" Value="application.entities.ItemRequestDistributionEntity"/>
+  </DesignTime>
+  <PDefAttribute
+    Name="sourceLocator"
+    IsUpdateable="true"
+    LOVName="LOV_sourceLocator">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </PDefAttribute>
+  <PDefAttribute
+    Name="sourceSubinventory"
+    IsUpdateable="true"
+    LOVName="LOV_sourceSubinventory">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </PDefAttribute>
+  <ViewAccessor
+    Name="LOVAccessor_locators1"
+    ViewInstanceName="datacontrol.locators"
+    RowLevelBinds="true"
+    RangeSize="10"/>
+  <ViewAccessor
+    Name="LOVAccessor_subinventories1"
+    ViewInstanceName="datacontrol.subinventories"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_sourceLocator"
+    ListVOName="LOVAccessor_locators1"
+    MRUCount="0"
+    NullValueFlag="none">
+    <AttrArray Name="AttrNames">
+      <Item Value="sourceLocator"/>
+      <Item Value="sourceLocatorId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="locator"/>
+      <Item Value="inventoryLocationId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="locator"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_sourceSubinventory"
+    ListVOName="LOVAccessor_subinventories1"
+    MRUCount="0"
+    NullValueFlag="none">
+    <AttrArray Name="AttrNames">
+      <Item Value="sourceSubinventory"/>
+      <Item Value="sourceSubinventoryId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="secondaryInventoryName"/>
+      <Item Value="subinventoryId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="secondaryInventoryName"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
+</PDefViewObject>
